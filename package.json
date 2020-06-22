@@ -1,0 +1,30 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "test": "prettier-standard --lint",
+    "format": "prettier-standard --format",
+    "release": "./release.sh"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*": "prettier-standard --lint"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@faastermetrics/lib": "^8.0.1"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.22.3",
+    "chalk-cli": "^4.1.0",
+    "semver": "^7.3.2",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.9",
+    "prettier-standard": "^16.3.0",
+    "standard": "^14.3.4"
+  }
+}
