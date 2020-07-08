@@ -16,7 +16,7 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "@faastermetrics/lib": "^8.0.1"
+    "@faastermetrics/lib": "^8.3.0"
   },
   "devDependencies": {
     "@zeit/ncc": "^0.22.3",
