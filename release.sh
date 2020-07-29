@@ -41,8 +41,8 @@ for d in $changed_files; do
 done
 
 REPO_SLUG=${GITHUB_REPOSITORY:-"FaaSterMetrics/test-functions"}
-PACKAGE_PREFIX="@FaaSterMetrics/exp-test-"
-PACKAGE_JSON="{\"name\":\"${PACKAGE_PREFIX}NAME\",\"version\":\"$VERSION\",\"publishConfig\":{\"registry\":\"https://npm.pkg.github.com/\"},\"repository\":{\"type\":\"git\",\"url\":\"ssh://git@github.com/${REPO_SLUG}.git\",\"directory\":\"functions/NAME\"}}"
+PACKAGE_PREFIX="@faastermetrics/exp-test-"
+PACKAGE_JSON="{\"name\":\"${PACKAGE_PREFIX}NAME\",\"version\":\"$VERSION\",\"publishConfig\":{\"access\":\"public\"},\"repository\":{\"type\":\"git\",\"url\":\"ssh://git@github.com/${REPO_SLUG}.git\",\"directory\":\"functions/NAME\"}}"
 
 for fname in $(echo $updated | tr ' ' '\n' | sort -u); do
   echo "publishing $fname" | chalk cyan
